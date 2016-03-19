@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: WP REST API (V2) isFront
-Description: WP REST API (V2) Modifications for isFront endpoint.
+Plugin Name: WP REST API (V2) is_front
+Description: WP REST API (V2) Modifications for is_front endpoint.
 Author: Oleg Kostin
 Version: 1.0
 Author URI: http://pmr.io
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! function_exists ( 'wp_rest_is_front_init' ) ) :
 
     /**
-     * Init JSON REST API isFront routes.
+     * Init JSON REST API is_front routes.
      *
      * @since 1.0.0
      */
@@ -26,7 +26,7 @@ if ( ! function_exists ( 'wp_rest_is_front_init' ) ) :
         );
     }
 
-    // Return settings
+    // Return is_front
     function wp_rest_is_front_return( $object, $field_name, $request ) {
         return (int)get_option( 'page_on_front' ) === $object['id'];
     }
