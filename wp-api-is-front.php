@@ -28,7 +28,7 @@ if ( ! function_exists ( 'wp_rest_is_front_init' ) ) :
 
     // Return settings
     function wp_rest_is_front_return( $object, $field_name, $request ) {
-        return get_option( 'page_on_front' ) === $object['ID'];
+        return get_option( 'page_on_front' ) === $object['id'];
     }
 
     add_action( 'init', 'wp_rest_is_front_init' );
