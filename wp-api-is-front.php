@@ -26,7 +26,17 @@ if ( ! function_exists ( 'wp_rest_is_front_init' ) ) :
         );
     }
 
-    // Return is_front
+    /**
+     * Handler for updating page data with is_front.
+     *
+     * @since 1.0.0
+     *
+     * @param array $object The object from the response
+     * @param string $field_name Name of field
+     * @param WP_REST_Request $request Current request
+     *
+     * @return bool
+     */
     function wp_rest_is_front_return( $object, $field_name, $request ) {
         return (int)get_option( 'page_on_front' ) === $object['id'];
     }
